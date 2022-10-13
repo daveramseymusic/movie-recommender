@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "movie-recommender"
+  site-url: "https://daveramseymusic.github.io/movie-recommender"
+  description: "Movie Recommender based on Fast.AI Collaborative Filtering Model"
+  repo-branch: main
+  repo-url: "https://github.com/daveramseymusic/movie-recommender"
