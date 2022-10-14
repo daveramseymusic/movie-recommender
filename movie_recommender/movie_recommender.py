@@ -3,7 +3,7 @@
 # %% auto 0
 __all__ = ['get_movie_recs', 'search_movies_n_recommend']
 
-# %% ../nbs/00_movie_recommender.ipynb 19
+# %% ../nbs/00_movie_recommender.ipynb 18
 def get_movie_recs(full_title):
     "This function will use the `nn.CosineSimilarity` on the 50 latent factors for each movie to find the 30 movies most similar to your favorite movie."
     movie_factors = learn.model.i_weight.weight
@@ -12,7 +12,7 @@ def get_movie_recs(full_title):
     idx = distances.argsort(descending=True)
     return [o for o in titles.title[idx.tolist()][:30]]
 
-# %% ../nbs/00_movie_recommender.ipynb 20
+# %% ../nbs/00_movie_recommender.ipynb 19
 def search_movies_n_recommend(favorite_movie:str # The movie title typed into the `gr.Textbox()` that the user will see on the `gradio` app
                              ):
     "This function returns 30 recommendations using `get_movie_recs` after searching through all movie titles to find any titles that contain the words in the `favorite_movie` variable."
