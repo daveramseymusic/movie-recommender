@@ -17,7 +17,7 @@ path = Path('../models_and_dls')
 # %% ../nbs/00_movie_recommender.ipynb 17
 #load your the model and movie titles with indexes (from the previous data loaders)
 learn = load_learner(path/'movie_predictor_large20mil_639.pkl')
-titles = pd.read_csv(path/'movie_20mil_dls.csv'); titles.head()
+titles = pd.read_csv(path/'movie_20mil_dls.csv')#; titles.head()
 
 # %% ../nbs/00_movie_recommender.ipynb 19
 def get_movie_recs(full_title:str, # String saved to `favorite_movie` variable
