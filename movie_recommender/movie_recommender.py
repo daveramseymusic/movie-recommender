@@ -16,10 +16,12 @@ path = Path('../models_and_dls')
 
 # %% ../nbs/00_movie_recommender.ipynb 17
 #load your the model and movie titles with indexes (from the previous data loaders)
-learn = load_learner(path/'movie_predictor_large20mil_639.pkl')
-titles = pd.read_csv(path/'movie_20mil_dls.csv')#; titles.head()
+learn = load_learner('../models_and_dls/movie_predictor_large20mil_639.pkl')
 
 # %% ../nbs/00_movie_recommender.ipynb 19
+titles = pd.read_csv(path/'movie_20mil_dls.csv',low_memory=False)#; titles.head()
+
+# %% ../nbs/00_movie_recommender.ipynb 21
 def get_movie_recs(full_title:str, # String saved to `favorite_movie` variable
                    learn,# Trained Model
                    titles #DataFrame with all movie titles from dls
@@ -31,7 +33,7 @@ def get_movie_recs(full_title:str, # String saved to `favorite_movie` variable
     idx = distances.argsort(descending=True)
     return [o for o in titles.title[idx.tolist()][:30]]
 
-# %% ../nbs/00_movie_recommender.ipynb 21
+# %% ../nbs/00_movie_recommender.ipynb 23
 def search_movies_n_recommend(favorite_movie:str, # The movie title typed into the `gr.Textbox()` that the user will see on the `gradio` app
                              learn, # Trained model
                               titles, # Movie titles df
