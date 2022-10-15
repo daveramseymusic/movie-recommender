@@ -14,10 +14,42 @@ pip install movie_recommender
 
 ## How to use
 
-Fill me in please! Don’t forget code examples:
+This lib provides a
+[`get_movie_recs`](https://daveramseymusic.github.io/movie-recommender/movie_recommender.html#get_movie_recs)
+function to get movie recommendations similar to the movie saved in the
+`full_title` variable.
 
 ``` python
-1+1
+get_movie_recs(full_title='Beasts of the Southern Wild (2012)',learn=learn,titles=titles)
 ```
 
-    2
+    ['Beasts of the Southern Wild (2012)',
+     'Ginger Snaps (2000)',
+     'Leaving Las Vegas (1995)',
+     'Being John Malkovich (1999)',
+     'Little Children (2006)',
+     'Ghost World (2001)',
+     'Yellow Submarine (1968)',
+     'Secret of Roan Inish, The (1994)',
+     'Louis C.K.: Live at The Comedy Store (2015)',
+     'Neon Genesis Evangelion: The End of Evangelion (Shin seiki Evangelion Gekijô-ban: Air/Magokoro wo, kimi ni) (1997)',
+     'Atlantic City (1980)',
+     'Z (1969)',
+     'Sex, Lies, and Videotape (1989)',
+     'Princess and the Warrior, The (Krieger und die Kaiserin, Der) (2000)',
+     'Act of Killing, The (2012)',
+     'Birdman: Or (The Unexpected Virtue of Ignorance) (2014)',
+     '24 Hour Party People (2002)',
+     'Animal Kingdom (2010)',
+     'Breaking the Waves (1996)',
+     'Rushmore (1998)',
+     'Videodrome (1983)',
+     'Last Night (1998)',
+     'City of God (Cidade de Deus) (2002)',
+     'Nosferatu (Nosferatu, eine Symphonie des Grauens) (1922)',
+     'Shining, The (1980)',
+     'Underground (1995)',
+     'Proposition, The (2005)',
+     'Brothers Bloom, The (2008)',
+     'Exit Through the Gift Shop (2010)',
+     'Lost in Translation (2003)']
